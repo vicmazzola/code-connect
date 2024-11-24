@@ -20,3 +20,19 @@ function readFileContent(file) {
     })
 }
 
+const mainImage = document.querySelector(".img-main");
+const imgName = document.querySelector(".img-name-container p");
+
+inputUpload.addEventListener("change", async (event) => {
+    const file = event.target.files[0];
+
+    if (file) {
+        try {
+            const fileContent = await readFileContent(file);
+            mainImage.src = fileContent.url;
+            imgName.textContent = fileContent.nome;
+        } catch (error) {
+            console.error("Error reading the file")
+        }
+    }
+})
