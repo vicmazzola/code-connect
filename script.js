@@ -52,3 +52,11 @@ inputTags.addEventListener("keypress", (event) => {
         }
     }
 })
+
+tagList.addEventListener("click", (event) => {
+    if(event.target.classList.contains("remove-tag")) {
+        const tagToRemove = event.target.parentElement;
+        tagList.removeChild(tagToRemove);
+    }
+})
+
