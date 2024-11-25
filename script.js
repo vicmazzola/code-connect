@@ -81,3 +81,18 @@ inputTags.addEventListener("keypress", async (event) => {
         }
     }
 })
+
+const postButton = document.querySelector(".post-button");
+
+postButton.addEventListener("click", async (event) => {
+    event.preventDefault();
+
+    const projectName = document.getElementById("name").value;
+    const projectDescription = document.getElementById("description").value;
+    const projectsTags = Array.from(tagList.querySelectorAll("p")).map((tag) => tag.textContent);
+
+    console.log(projectName);
+    console.log(projectDescription);
+    console.log(projectsTags);
+
+})
