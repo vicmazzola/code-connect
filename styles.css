@@ -26,13 +26,14 @@ body {
     padding: 56px 16px;
 }
 
-/* Original aside and main styles for large screens */
+
 aside {
     background-color: var(--itens-background);
     border-radius: 10px;
     height: 100%;
     padding: 40px 16px;
     text-align: center;
+
 }
 
 .link-list {
@@ -235,27 +236,37 @@ textarea {
     font-size: 15px;
 }
 
-/* Mobile Styling for smaller screens (<= 768px) */
+
 @media (max-width: 768px) {
     body {
         flex-direction: column;
         align-items: center;
         gap: 16px;
-        padding: 24px;
-    }
+        padding: 56px 24px 24px;
 
     aside {
-        display: none; /* Hide aside for small devices */
+        display: none;
     }
 
     .navbar {
+        width: 100%;
+        left: 0;
+        right: 0;
+        position: fixed;
+        z-index: 999;
+        top: 0;
         margin-bottom: 20px;
+    }
+
+    .navbar-collapse {
+        background-color: var(--itens-background);
     }
 
     main {
         flex-direction: column;
         gap: 16px;
         width: 100%;
+        margin-top: 30px;
         padding: 16px;
     }
 
@@ -271,7 +282,7 @@ textarea {
 
     .img-main {
         width: 100%;
-        max-width: 600px; /* Limit width for better scaling */
+        max-width: 600px;
         height: auto;
         object-fit: contain;
     }
@@ -283,6 +294,7 @@ textarea {
 
     .buttons-container button {
         width: 100%;
-        min-width: 120px; /* Minimum button width */
+        min-width: 120px;
     }
-}
+}}
+
