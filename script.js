@@ -91,9 +91,6 @@ postButton.addEventListener("click", async (event) => {
     const projectDescription = document.getElementById("description").value;
     const projectsTags = Array.from(tagList.querySelectorAll("p")).map((tag) => tag.textContent);
 
-    console.log(projectName);
-    console.log(projectDescription);
-    console.log(projectsTags);
 
 })
 
@@ -110,3 +107,33 @@ async function postProject(projectName, projectDescription, projectsTags) {
         }, 2000)
     })
 }
+
+postButton.addEventListener("click", async (event) => {
+    event.preventDefault();
+
+    const projectName = document.getElementById("name").value;
+    const projectDescription = document.getElementById("description").value;
+    const projectsTags = Array.from(tagList.querySelectorAll("p")).map((tag) => tag.textContent);
+
+    try{
+        const result = await postProject(projectName, projectDescription, projectsTags);
+        console.log(result);
+        alert("Project posted successfully.");
+    } catch (error) {
+        console.log("Something wrong", error);
+        alert("An error occurred while posting project.");
+    }
+})
+
+const discardButton = document.querySelector(".discard-button");
+
+discardButton.addEventListener("click", async (event) => {
+    event.preventDefault();
+    const form = document.querySelector("form");
+    form.reset();
+
+    mainImage.src = "./img/img1.png";
+    imgName.textContent = "project_img.png";
+
+    tagList.innerHTML = "";
+})
