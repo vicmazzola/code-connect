@@ -96,3 +96,17 @@ postButton.addEventListener("click", async (event) => {
     console.log(projectsTags);
 
 })
+
+async function postProject(projectName, projectDescription, projectsTags) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const isSuccessful = Math.random() > 0.5;
+
+            if(isSuccessful) {
+                resolve("Project posted successfully.");
+            } else {
+                reject("Project posted failed");
+            }
+        }, 2000)
+    })
+}
