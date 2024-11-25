@@ -40,18 +40,6 @@ inputUpload.addEventListener("change", async (event) => {
 const inputTags = document.getElementById("input-tags");
 const tagList = document.getElementById("tag-list");
 
-inputTags.addEventListener("keypress", (event) => {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        const textTag = inputTags.value.trim();
-        if (textTag !== "") {
-            const newTag = document.createElement("li");
-            newTag.innerHTML = `<p>${textTag}</p> <img src="./img/close-black.svg" class="remove-tag">`
-            tagList.appendChild(newTag);
-            tagList.value = "";
-        }
-    }
-})
 
 tagList.addEventListener("click", (event) => {
     if (event.target.classList.contains("remove-tag")) {
@@ -70,3 +58,26 @@ async function checkAvailableTags(textTag) {
 
     })
 }
+
+inputTags.addEventListener("keypress", async (event) => {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        const textTag = inputTags.value.trim();
+        if (textTag !== "") {
+            try {
+                const tagExist = await checkAvailableTags(textTag);
+                if (tagExist) {
+                    const newTag = document.createElement("li");
+                    newTag.innerHTML = `<p>${textTag}</p> <img src="./img/close-black.svg" class="remove-tag">`
+                    tagList.appendChild(newTag);
+                    inputTags.value = "";
+                } else {
+                    alert("Tag not found");
+                }
+            } catch (error) {
+                console.error("Error checking if tag exists");
+                alert("An error occurred while checking if the tag exists. Check the console for details.");
+            }
+        }
+    }
+})
