@@ -14,30 +14,25 @@
     padding: 0;
 }
 
-
 body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: var(--font-family), serif;
-
     display: flex;
-
     justify-content: center;
     align-items: flex-start;
     gap: 27px;
-    height: 100vh;
+    min-height: 100vh;
     padding: 56px 16px;
-
 }
 
-
+/* Original aside and main styles for large screens */
 aside {
     background-color: var(--itens-background);
     border-radius: 10px;
     height: 100%;
     padding: 40px 16px;
     text-align: center;
-
 }
 
 .link-list {
@@ -47,7 +42,6 @@ aside {
     margin-top: 80px;
     align-items: center;
     list-style-type: none;
-
 }
 
 .link-list li a {
@@ -79,7 +73,7 @@ main {
 }
 
 h2 {
-    font-size:26px;
+    font-size: 26px;
     margin-bottom: 40px;
     font-weight: 600;
 }
@@ -87,7 +81,7 @@ h2 {
 form {
     display: flex;
     flex-direction: column;
-    gap: 24px
+    gap: 24px;
 }
 
 form div label {
@@ -104,26 +98,26 @@ textarea {
     background-color: var(--secondary-color);
     border: none;
     border-radius: 4px;
-    font-family: var(--font-family), serif;
+    font-family: var(--font-family);
     line-height: 23px;
 }
 
 form div input {
-    height:39px;
+    height: 39px;
 }
 
 textarea {
     height: 161px;
+    resize: vertical; /* Allow resizing */
 }
 
 .tag-list li {
     display: flex;
     background-color: var(--secondary-color);
-    color:var(--background-color);
+    color: var(--background-color);
     gap: 10px;
     padding: 4px 8px;
     border-radius: 4px;
-
 }
 
 .tag-list {
@@ -231,7 +225,7 @@ textarea {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    margin-left: 8px
+    margin-left: 8px;
 }
 
 .img-name-container {
@@ -241,6 +235,7 @@ textarea {
     font-size: 15px;
 }
 
+/* Mobile Styling for smaller screens (<= 768px) */
 @media (max-width: 768px) {
     body {
         flex-direction: column;
@@ -250,9 +245,11 @@ textarea {
     }
 
     aside {
-        width: 100%;
-        padding: 16px;
-        height: auto;
+        display: none; /* Hide aside for small devices */
+    }
+
+    .navbar {
+        margin-bottom: 20px;
     }
 
     main {
@@ -268,11 +265,15 @@ textarea {
 
     .img-container {
         height: auto;
+        width: 100%;
+        padding: 16px 8px;
     }
 
     .img-main {
-        max-width: 100%;
+        width: 100%;
+        max-width: 600px; /* Limit width for better scaling */
         height: auto;
+        object-fit: contain;
     }
 
     .buttons-container {
@@ -281,7 +282,7 @@ textarea {
     }
 
     .buttons-container button {
-        width: auto;
-        min-width: 120px;
+        width: 100%;
+        min-width: 120px; /* Minimum button width */
     }
 }
