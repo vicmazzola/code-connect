@@ -128,12 +128,20 @@ textarea {
     background-color: var(--secondary-color);
     color: var(--background-color);
     gap: 10px;
-    padding: 4px 8px;
+    padding: 1px 8px 0;
     border-radius: 4px;
+
+}
+
+.tag-list li p {
+    margin: 0;
+
 }
 
 .tag-list {
     display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .buttons-container {
