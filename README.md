@@ -7,7 +7,7 @@ This web application was developed as part of the Alura course, JavaScript: Unde
 Experience Code-Connect live at:  [Code-Connect](https://(https://code-connect-ten-mu.vercel.app/)/) 
 
 ## 🖼️ Preview
-![Shopping List Preview](./img/img.png)
+<img src="./img/img.png" alt="Code-connect Preview" width="400">
 
 
 ## 🔨 Project Features
