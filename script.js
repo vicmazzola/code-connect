@@ -144,3 +144,5 @@ discardButton.addEventListener("click", async (event) => {
 
     tagList.innerHTML = "";
 })
+
+

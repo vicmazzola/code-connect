@@ -66,14 +66,13 @@ aside img {
     font-size: 22px;
 }
 
-.link-list li:first-of-type a {
-    color: var(--primary-color);
-}
 
 .highlight-link {
     border: 1px solid var(--primary-color);
+    color: var(--primary-color);;
     padding: 12px 30px;
     border-radius: 8px;
+
 }
 
 main {
@@ -177,7 +176,6 @@ textarea {
     background-color: var(--secondary-color);
     color: var(--background-color);
 }
-
 
 
 .buttons-container {
@@ -299,57 +297,66 @@ textarea {
         gap: 16px;
         padding: 56px 24px 24px;
 
-    aside {
-        display: none;
-    }
+        aside {
+            display: none;
+        }
 
-    .navbar {
-        width: 100%;
-        left: 0;
-        right: 0;
-        position: fixed;
-        z-index: 999;
-        top: 0;
-        margin-bottom: 20px;
-    }
+        .navbar {
+            width: 100%;
+            left: 0;
+            right: 0;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            margin-bottom: 20px;
+        }
 
-    .navbar-collapse {
-        background-color: var(--itens-background);
-    }
+        .navbar-collapse {
+            background-color: var(--itens-background);
+        }
 
-    main {
-        flex-direction: column;
-        gap: 16px;
-        width: 100%;
-        margin-top: 30px;
-        padding: 16px;
-    }
+        .highlight-link {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
 
-    .description-container {
-        width: 100%;
-    }
+        main {
+            flex-direction: column;
+            gap: 16px;
+            width: 100%;
+            margin-top: 30px;
+            padding: 16px;
+        }
 
-    .img-container {
-        height: auto;
-        width: 100%;
-        padding: 16px 8px;
-    }
+        .description-container {
+            width: 100%;
+        }
 
-    .img-main {
-        width: 100%;
-        max-width: 600px;
-        height: auto;
-        object-fit: contain;
-    }
+        .img-container {
+            height: auto;
+            width: 100%;
+            padding: 16px 8px;
+        }
 
-    .buttons-container {
-        flex-direction: column;
-        gap: 12px;
-    }
+        .img-main {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            object-fit: contain;
+        }
 
-    .buttons-container button {
-        width: 100%;
-        min-width: 120px;
+        .buttons-container {
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .buttons-container button {
+            width: 100%;
+            min-width: 120px;
+        }
     }
-}}
+}
 
