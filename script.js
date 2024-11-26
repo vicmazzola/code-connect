@@ -50,6 +50,13 @@ tagList.addEventListener("click", (event) => {
 
 const availableTags = ["Front-end", "Programming", "Back-end", "Data Science", "Full-stack", "HTML", "CSS", "JavaScript", "Java"];
 
+
+const availableTagsContainer = document.getElementById("available-tags");
+
+
+availableTagsContainer.textContent = availableTags.join(", ");
+
+
 async function checkAvailableTags(textTag) {
     return new Promise((resolve) => {
         setTimeout(() => {

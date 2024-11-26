@@ -144,6 +144,42 @@ textarea {
     gap: 8px;
 }
 
+.tags-info {
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.tags-info span {
+
+    color: var(--primary-color);
+}
+
+.suggestions-list {
+    margin-top: 8px;
+    list-style: none;
+    padding: 0;
+    background-color: var(--itens-background);
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    max-height: 100px;
+    overflow-y: auto;
+    position: absolute;
+    z-index: 10;
+}
+
+.suggestions-list li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestions-list li:hover {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+}
+
+
+
 .buttons-container {
     display: flex;
     gap: 24px;
