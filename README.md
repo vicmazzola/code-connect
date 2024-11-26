@@ -4,7 +4,9 @@
 This web application was developed as part of the Alura course, JavaScript: Understanding Promises and Async/Await. The project follows the course content with personalized enhancements to meet specific needs. The deployment was done using Vercel, ensuring smooth and fast hosting.
 
 ## 🌐 Live Demo
-Experience Code-Connect live at:  [Code-Connect](https://(https://code-connect-ten-mu.vercel.app/)/) 
+
+Experience Code-Connect live at: [Code-Connect Live Demo](https://code-connect-ten-mu.vercel.app/)
+
 
 ## 🖼️ Preview
 <img src="./img/img.png" alt="Code-connect Preview" width="400">
