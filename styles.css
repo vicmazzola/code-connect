@@ -84,7 +84,15 @@ main {
     gap: 24px;
 }
 
-h2 {
+.index-container {
+    background-color: var(--itens-background);
+    border-radius: 10px;
+    padding: 32px;
+    display: flex;
+    gap: 24px;
+}
+
+h2, h4 {
     font-size: 26px;
     margin-bottom: 40px;
     font-weight: 600;
@@ -178,7 +186,10 @@ textarea {
     color: var(--background-color);
 }
 
-
+.btn-index{
+    background-color: #58e865;
+    color: black;
+}
 .buttons-container {
     display: flex;
     gap: 24px;
@@ -241,11 +252,15 @@ textarea {
     width: 422px;
 }
 
+
+
 .img-main {
     border-radius: 8px;
     height: 100%;
     object-fit: cover;
 }
+
+
 
 .img-container {
     height: 368px;
@@ -253,6 +268,8 @@ textarea {
     background-color: var(--secondary-color);
     border-radius: 8px;
 }
+
+
 
 .upload-img-container button {
     margin: 16px 0 8px 0;
@@ -282,6 +299,8 @@ textarea {
     transform: translateY(-50%);
     margin-left: 8px;
 }
+
+
 
 .img-name-container {
     display: flex;
