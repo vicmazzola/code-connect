@@ -67,13 +67,14 @@ aside img {
 }
 
 
-.highlight-link {
+.highlight-link,
+.link-post {
     border: 1px solid var(--primary-color);
-    color: var(--primary-color);;
-    padding: 12px 30px;
+    color: var(--primary-color);
+    padding: 6px 16px;
     border-radius: 8px;
-
 }
+
 
 main {
     background-color: var(--itens-background);
@@ -315,13 +316,16 @@ textarea {
             background-color: var(--itens-background);
         }
 
-        .highlight-link {
+        .highlight-link-mobile,
+        .link-post-mobile {
             border: 1px solid var(--primary-color);
             color: var(--primary-color);
-            padding: 6px 16px;
+            padding: 3px 8px;
+            width: 15%;
             border-radius: 4px;
             font-size: 14px;
         }
+
 
         main {
             flex-direction: column;

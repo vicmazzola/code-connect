@@ -106,7 +106,7 @@ async function postProject(projectName, projectDescription, projectsTags) {
         setTimeout(() => {
             const isSuccessful = Math.random() > 0.5;
 
-            if(isSuccessful) {
+            if (isSuccessful) {
                 resolve("Project posted successfully.");
             } else {
                 reject("Project posted failed");
@@ -122,7 +122,7 @@ postButton.addEventListener("click", async (event) => {
     const projectDescription = document.getElementById("description").value;
     const projectsTags = Array.from(tagList.querySelectorAll("p")).map((tag) => tag.textContent);
 
-    try{
+    try {
         const result = await postProject(projectName, projectDescription, projectsTags);
         console.log(result);
         alert("Project posted successfully.");
@@ -144,5 +144,3 @@ discardButton.addEventListener("click", async (event) => {
 
     tagList.innerHTML = "";
 })
-
-
