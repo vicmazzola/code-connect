@@ -310,6 +310,59 @@ textarea {
 }
 
 
+
+.project-card {
+    width: 18rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+
+.btn-index {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-index:hover {
+    background-color: #a2f3a8;
+    transform: translateY(-2px);
+}
+
+
+
+
+
+
+
 @media (max-width: 768px) {
     body {
         flex-direction: column;
