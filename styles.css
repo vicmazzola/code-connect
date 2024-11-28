@@ -389,8 +389,19 @@ textarea {
         }
 
         .navbar-collapse {
-            background-color: var(--itens-background);
+            background-color: #171D1F;
         }
+
+        .custom-toggler {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        .navbar-toggler-icon {
+            width: 1.3rem;
+            height: 1.2rem;
+        }
+
 
         .highlight-link-mobile
          {
